@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-11-14T17:00:11 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b004bf9-f504-4841-aaab-a09a95d7ceeb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="14"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="Dataset" uuid="2c14efed-26e0-4534-8735-395e9eba4fe7">
+		<queryString language="SQL">
+			<![CDATA[select * from cliente]]>
+		</queryString>
+		<field name="CLI_ID" class="java.lang.Integer"/>
+		<field name="CLI_EMPRESA" class="java.lang.String"/>
+		<field name="CLI_CONTACTO" class="java.lang.String"/>
+		<field name="CLI_TELEFONO" class="java.lang.String"/>
+		<field name="CLI_CELULAR" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from cliente]]>
+	</queryString>
+	<field name="cliId" class="java.lang.String"/>
+	<field name="cliEmpresa" class="java.lang.String"/>
+	<field name="cliContacto" class="java.lang.String"/>
+	<field name="cliTelefono" class="java.lang.String"/>
+	<field name="cliCelular" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="455" y="29" width="100" height="20" uuid="f892945e-78aa-4b2c-9f7c-8f61a3f29994"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="9" width="293" height="40" uuid="b7687d6c-dec1-4492-ace2-9af11e24ef7e"/>
+				<textElement>
+					<font size="25"/>
+				</textElement>
+				<text><![CDATA[Reporte de Clientes]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="90229a92-1e12-46d6-ac51-56d536ce9168"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="20" width="100" height="20" uuid="ad1b8294-fdd1-465a-9452-54b31340fe39"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="20" width="100" height="20" uuid="3318dd4a-9412-48b9-bb5e-6fdb867f7d7e"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTACTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="20" width="100" height="20" uuid="88638a35-42d7-46ab-b8ad-bfd5d7f1c930"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="20" width="100" height="20" uuid="57e41a4c-a47e-4b1e-b5d6-41cb9d903d22"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CELULAR]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="1733f2da-547d-465a-8e27-3d25c148de71"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="555" height="1" uuid="f5ddc454-cc7d-405d-94d8-08ee36cccb00"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="0" width="100" height="20" uuid="81d6ea22-cc8f-44ff-b20e-cd634eb9d780"/>
+				<textFieldExpression><![CDATA[$F{cliEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="304" y="0" width="100" height="20" uuid="ca9d8d37-6893-4ec2-b4f5-e3eae5a0d5f4"/>
+				<textFieldExpression><![CDATA[$F{cliTelefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="0" width="100" height="20" uuid="b2968262-b45c-4d82-a9b9-3848d1aa1a4c"/>
+				<textFieldExpression><![CDATA[$F{cliCelular}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="0" width="100" height="20" uuid="a7853f48-5da4-4b4a-a4ed-b1eb12fdb1b0"/>
+				<textFieldExpression><![CDATA[$F{cliContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="38">
+			<textField>
+				<reportElement x="213" y="0" width="80" height="20" uuid="2dd25098-de74-4abb-89e5-2f678ac39381"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="293" y="0" width="40" height="20" uuid="e09546b6-1426-4f71-b69d-a6ba9c1aabb5"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="455" y="0" width="100" height="20" uuid="27add2d8-1379-446c-9f45-4f5ff6643e12"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

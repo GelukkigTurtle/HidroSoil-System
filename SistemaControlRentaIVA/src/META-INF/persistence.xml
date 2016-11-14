@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="SistemaControlRentaIVAPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.SistemaControlRentaIVAFx.Entities.Proyecto</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Cliente</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Estado</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Renta</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Iva</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Usuario</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Presupuesto</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Gastos</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Departamentos</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Dias</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Meses</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Años</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Fecha</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Ubicacion</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Municipios</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.ProyectoVista</class>
+    <class>com.SistemaControlRentaIVAFx.Entities.Costos</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_hidrosoil?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="1234"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+    </properties>
+  </persistence-unit>
+</persistence>
